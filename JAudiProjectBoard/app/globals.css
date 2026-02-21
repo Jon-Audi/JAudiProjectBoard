@@ -1,0 +1,44 @@
+:root {
+  --bg: #0d0f0e;
+  --surface: #131614;
+  --panel: #191c1a;
+  --border: #2a2e2c;
+  --accent: #00e676;
+  --accent2: #00bcd4;
+  --warn: #ff9800;
+  --danger: #f44336;
+  --purple: #ce93d8;
+  --text: #e8ede9;
+  --muted: #6b756e;
+  --done: #1a2e1d;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body { height: 100%; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Barlow', 'Inter', sans-serif;
+  font-weight: 300;
+  overflow: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg, transparent, transparent 2px,
+    rgba(0,0,0,0.06) 2px, rgba(0,0,0,0.06) 4px
+  );
+  pointer-events: none;
+  z-index: 9999;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500&display=swap');
+
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
